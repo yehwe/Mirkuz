@@ -1,0 +1,192 @@
+.registration-main {
+  display: flex;
+  min-height: 120vh;
+}
+
+.registration-left {
+  flex: 1 1 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 8vw;
+}
+
+.welcome-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+.welcome-title .blue {
+  color: #4b6cb7;
+  display: inline;
+}
+.welcome-title .black {
+  color: #111;
+  display: block;
+}
+.welcome-desc {
+  font-size: 16px;
+  color: #222;
+  margin-top: 16px;
+}
+
+.registration-right {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../Assets/Images/mirkuz-overlay.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.registration-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 61, 120, 0.55);
+  z-index: 1;
+  border-radius: 0 0 0 0;
+}
+
+.registration-form-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 350px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 24px;
+  padding: 20px 32px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.registration-form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.reg-form-group {
+  width: 70%;
+  align-items: center;
+}
+.reg-form-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #fff;
+  border: 1.5px solid #cbc6c6;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.registration-form input[type="email"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form input[type="text"]:focus {
+  background: transparent;
+  border-color: #2563eb;
+}
+.registration-form input[type="email"]::placeholder,
+.registration-form input[type="password"]::placeholder,
+.registration-form input[type="text"]::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+  font-size: 15px;
+}
+
+.button-primary {
+  width: 100%;
+  box-sizing: border-box;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.button-primary:hover {
+  background: #174ea6;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1024px) {
+  .registration-main {
+    flex-direction: column;
+  }
+  .registration-left, .registration-right {
+    width: 100%;
+    padding: 40px 5vw;
+  }
+  .registration-left {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0;
+  }
+}
+/* @media (max-width: 768px) {
+  .registration-main {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .registration-left, .registration-right {
+    padding: 32px 4vw;
+    min-height: 220px;
+  }
+  .registration-left .welcome-title {
+    font-size: 36px;
+  }
+  .registration-form-container {
+    max-width: 95vw;
+    padding: 16px 4px 8px 4px;
+  }
+} */
+@media (max-width: 680px) {
+  .registration-left, .registration-right {
+    padding: 16px 2vw;
+  }
+  .registration-left .welcome-title {
+    font-size: 28px;
+  }
+  .registration-form-title {
+    font-size: 1.2rem;
+  }
+  .registration-form-container {
+
+    padding: 16px 4px 16px 4px;
+  }
+}

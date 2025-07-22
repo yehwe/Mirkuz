@@ -1,0 +1,270 @@
+/* Login.css */
+
+.login-hero-section {
+  display: flex;
+  min-height: 110vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LEFT SIDE */
+.login-left {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 0 30px 80px;
+}
+
+.login-left-top {
+  margin-top: 40px;
+}
+
+.welcome-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.welcome-title .blue {
+  color: #4a6fdc;
+  display: block;
+}
+
+.welcome-title .black {
+  color: #111;
+  display: block;
+}
+
+.welcome-desc {
+  font-size: 18px;
+  color: #222;
+  margin-top: 18px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.login-left-bottom {
+  margin-bottom: 30px;
+}
+
+
+
+/* RIGHT SIDE */
+.login-right {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-width: 0;
+  background: url('../../Assets/Images/mirkuz-overlay.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.login-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: rgba(40, 13, 194, 0.35);  */
+  z-index: 1;
+  pointer-events: none;
+}
+.login-right > * {
+  position: relative;
+  z-index: 2;
+}
+.login-right-top {
+  padding: 150px 60px 0 60px;
+}
+
+.contact-title h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-column {
+  border-radius: 18px;
+  padding: 8px 28px 24px 28px;
+  max-width: 300px;
+  margin: 0 auto;
+  height: 150px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-field {
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.form-field.error input {
+  border-color: #e74c3c;
+}
+
+.login-form {
+  width: 100%;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-label {
+  font-size: 15px;
+  font-weight: 500;
+  color:  #fff;
+  margin-bottom: 6px;
+  display: block;
+}
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid #fff;
+}
+.login-form input[type="email"]::placeholder,
+.login-form input[type="password"]::placeholder,
+.login-form input[type="text"]::placeholder {
+  color: #0e0f13;
+  opacity: 1;
+}
+.login-form .form-label {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+.login-form .form-group {
+  margin-bottom: 24px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4a6fdc;
+  cursor: pointer;
+}
+
+.button-primary {
+  width: 100%;
+  background: #4a6fdc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button-primary:hover {
+  background: #2ecc71;
+}
+
+.forgot-password-link {
+  color: #0a0505;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+  margin-left: 80px;
+  text-align: center;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* BOTTOM LINKS RIGHT */
+.login-right-bottom {
+  margin-bottom: 30px;
+  padding: 0 60px;
+}
+
+.bottom-links-right {
+  display: flex;
+  gap: 60px;
+}
+
+.bottom-links-right .bottom-link {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.bottom-links-right .bottom-link::after {
+  background: #2ecc71;
+}
+.login-links{
+  display: none;
+}
+/* Responsive */
+@media (max-width: 780px) {
+
+  .login-hero-section {
+    flex-direction: column;
+    padding: 0;
+  }
+  .login-left, .login-right {
+    width: 100vw;
+    padding: 24px 8px 0 8px;
+    flex: unset;
+  }
+  .login-left-bottom, .login-right-bottom {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .bottom-links-left, .bottom-links-right {
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .bottom-link {
+    font-size: 16px;
+    min-width: 60px;
+    padding-bottom: 2px;
+  }
+  .bottom-link::after {
+    height: 2px;
+    width: 40%;
+  }
+}

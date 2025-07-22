@@ -1,0 +1,138 @@
+.profile-page {
+  min-height: 100vh;
+  background: #f4f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 8px 0 8px;
+}
+
+.profile-main-form {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+  padding: 32px 20px 24px 20px;
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.profile-form-data {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-form-data label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #bfc9e0;
+  font-size: 1rem;
+  background: #f7faff;
+  color: #222;
+  margin-top: 4px;
+  margin-bottom: 0;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.focus-area-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 8px;
+}
+
+.focus-area-btn {
+  background: #f4f7fa;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.focus-area-btn.selected, .focus-area-btn:active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+  transform: scale(1.05);
+  font-weight: 700;
+}
+.focus-area-btn:not(.selected):hover {
+  background: #e3eafe;
+  color: #174ea6;
+  border-color: #174ea6;
+}
+
+.focus-area-custom-input {
+  margin-top: 10px;
+  width: 60%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #bfc9e0;
+  font-size: 1rem;
+}
+
+.file-info {
+  font-size: 0.95rem;
+  color: #2563eb;
+  margin-top: 4px;
+  display: block;
+}
+
+.submit-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.submit-btn:disabled {
+  background: #bfc9e0;
+  color: #fff;
+  cursor: not-allowed;
+}
+.submit-btn:hover:not(:disabled) {
+  background: #174ea6;
+}
