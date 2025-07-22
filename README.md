@@ -1,58 +1,70 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Mirkuz Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React TypeScript application built with Vite and Material-UI.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+Mirkuz-FE/
+├── Mirkuz/
+│   ├── src/
+│   │   ├── Api/          # API integration and services
+│   │   ├── Assets/       # Static assets (images, fonts, etc.)
+│   │   ├── Components/   # Reusable UI components
+│   │   ├── Pages/        # Page components
+│   │   ├── App.tsx       # Main application component
+│   │   ├── main.tsx      # Application entry point
+│   │   └── index.css     # Global styles
+│   ├── public/           # Public static files
+│   ├── dist/             # Build output directory
+│   ├── index.html        # HTML entry point
+│   ├── vite.config.ts    # Vite configuration
+│   ├── tsconfig.json     # TypeScript configuration
+│   └── package.json      # Project dependencies
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 18
+- TypeScript
+- Vite
+- Material-UI
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
 ```
-=======
-# Mirkuz
->>>>>>> 6d7d50ccec460531c3eea720c100a13af51bc94a
+
+2. Start development server:
+```bash
+npm run dev
+```
+
+3. Build for production:
+```bash
+npm run build
+```
+
+## Development
+
+The project uses:
+- TypeScript for type safety
+- ESLint for code linting
+- Vite for fast development and building
+- Material-UI for component library
+
+## Project Organization
+
+- `src/Api`: API integration and service layer
+- `src/Components`: Reusable UI components
+- `src/Pages`: Page-level components
+- `src/Assets`: Static assets like images and fonts
+
+## Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run lint`: Run ESLint
+- `npm run preview`: Preview production build
